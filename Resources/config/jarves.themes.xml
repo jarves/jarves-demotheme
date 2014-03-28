@@ -1,0 +1,23 @@
+<config>
+  <bundle>
+    <themes>
+      <theme id="jarvesDemoTheme">
+        <label>Jarves cms Demo Theme</label>
+        <contents>
+          <content>
+            <label>Underline</label>
+            <file>JarvesDemoThemeBundle:Content:underline.html.twig</file>
+          </content>
+        </contents>
+        <layouts>
+          <layout key="startpage">
+            <file>JarvesDemoThemeBundle:Layout:default.html.twig</file>
+          </layout>
+          <layout key="default">
+            <file>JarvesDemoThemeBundle:Layout:default.html.twig</file>
+          </layout>
+        </layouts>
+      </theme>
+    </themes>
+  </bundle>
+</config>

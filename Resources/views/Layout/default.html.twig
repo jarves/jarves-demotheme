@@ -1,0 +1,81 @@
+{{ loadAsset('@JarvesDemoThemeBundle/base.css') }}
+
+<div class="header">
+    <div class="wrapper">
+        <div class="header-top">
+            {{ navigationLevel(1) }}
+        </div>
+        <div class="header-logo">
+            <a href="{{ baseUrl }}">
+                {% if themeProperties.logo is defined %}
+                <img src="{{ resizeImage(themeProperties.logo, '90x90') }}" align="left" />
+                {% endif %}
+                <span class="header-logo-title">{{ themeProperties.title|default('Title') }}</span><br />
+                <span class="header-logo-slogan">{{ themeProperties.slogan|default('Slogan') }}</span>
+            </a>
+        </div>
+
+        <div class="header-subnavi">
+            {{ navigationLevel(2) }}
+        </div>
+
+        <div class="header-search">
+            <form action="{$themeProperties.search_page|realUrl}" method="get">
+                <input type="text" name="q" placeholder="{{ t('Keyword ...') }}" />
+                <input type="submit" class="submit" value="{{ tc('searchButton', 'Search') }}" />
+                <input type="hidden" name="searchDo" value="1" />
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="wrapper">
+        <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td valign="top" width="700">
+                    <div class="content-main">
+                        <div class="content-main-padding">
+                            {{ breadcrumb() }}
+
+                            {% content 1.1 type 'column' %}
+
+                            {% contents '1' %}
+                        </div>
+                    </div>
+                </td>
+                <td valign="top">
+                    <div class="content-sidebar">
+                        {% contents 2 %}
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="wrapper">footer-box
+        <div class="footer-box">
+            <div class="footer-box-padding">
+                <table width="100%">
+                    <tr>
+                        <td valign="top">
+                            {if $themeProperties.footer_deposit eq ""}
+                                [[Please set "Footer deposit" under Domain » Theme » Jarves Demo]]
+                            {else}
+                                {page id=$themeProperties.footer_deposit}
+                            {/if}
+                        </td>
+                        <td align="right" valign="top">
+                            {navigation id=$themeProperties.footer_navi template="@JarvesDemoThemeBundle/navigation_footer.tpl"}
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

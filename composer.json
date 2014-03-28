@@ -1,0 +1,18 @@
+{
+    "name": "jarves/demotheme-bundle",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marc J. Schmidt",
+            "email": "marc@jarves.io",
+            "homepage": "http://www.jarves.io"
+        }
+    ],
+    "target-dir": "Jarves/DemoTheme",
+    "autoload": {
+        "psr-0": {
+            "Jarves\\DemoTheme": ""
+        }
+    }
+}
