@@ -1,5 +1,7 @@
 {
     "name": "jarves/demotheme-bundle",
+    "description": "The default theme for Jarves demo website",
+    "keywords": ["DemoTheme", "Theme", "Jarves"],
     "license": "LGPL-3.0",
     "homepage": "http:\/\/jarves.io\/",
     "authors": [
