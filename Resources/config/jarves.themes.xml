@@ -11,12 +11,37 @@
                 </contents>
                 <layouts>
                     <layout key="startpage">
-                        <file>JarvesDemoThemeBundle:Layout:default.html.twig</file>
+                        <file>JarvesDemoThemeBundle:Layout:startpage.html.twig</file>
                     </layout>
                     <layout key="default">
                         <file>JarvesDemoThemeBundle:Layout:default.html.twig</file>
                     </layout>
                 </layouts>
+                <options>
+                    <field id="title" type="text">
+                        <label>Header Title</label>
+                        <description>Title that is shown in the header</description>
+                    </field>
+                    <field id="slogan" type="text">
+                        <label>Header Slogan</label>
+                        <description>Slogan that is shown under the header title</description>
+                    </field>
+                    <field id="logo" type="file">
+                        <label>Logo file</label>
+                    </field>
+                    <field id="searchPage" type="page">
+                        <label>Search page</label>
+                        <description>The search page, at which the search form is targeted.</description>
+                    </field>
+                    <field id="footerNavigation" type="page">
+                        <label>Navigation Footer</label>
+                        <description>Displays all children from selected node in the footer as navigation</description>
+                    </field>
+                    <field id="footerTray" type="page">
+                        <label>Footer Text</label>
+                        <description>Displays the tray content from selected node in the footer</description>
+                    </field>
+                </options>
             </theme>
         </themes>
     </bundle>
